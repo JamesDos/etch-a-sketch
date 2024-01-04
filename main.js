@@ -116,7 +116,7 @@ let resizeGrid = n => {
 };
 
 slider.addEventListener('input', () => {
-  sliderLabel.textContent = slider.value;
+  sliderLabel.textContent = `${slider.value} x ${slider.value}`;
   gridWidth = parseInt(slider.value);
   resizeGrid(gridWidth);
 })
