@@ -1,0 +1,54 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  gap: 32px;
+}
+
+.game-grid {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border: 10px honeydew solid;
+}
+
+.grid-box {
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+}
+
+.grid-row {
+  display: flex;
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+}
+
+.colored {
+  background-color: black;
+  height: auto;
+  width: auto;
+}
+
+.uncolored {
+  background-color: white;
+  height: auto;
+  width: auto;
+}
+
+button, .unselected{
+  border-radius: 8px;
+  min-height: 32px;
+  min-width: 64px;
+}
+
+.selected {
+  color: white;
+  background-color: darkslategray;
+}
