@@ -5,10 +5,10 @@ let defaultButton = document.querySelector('#default');
 let rainbowButton = document.querySelector('#rainbow');
 let eraseButton = document.querySelector('#eraser');
 let clearButton = document.querySelector('#clear');
-let slider= document.querySelector('#slider');
+let slider = document.querySelector('#slider');
 let sliderLabel = document.querySelector('.slider-label');
 
-sliderLabel.textContent = gridWidth;
+sliderLabel.textContent = `${gridWidth} x ${gridWidth}`;
 
 defaultButton.className = ('selected');
 
@@ -108,8 +108,6 @@ eraseButton.addEventListener('click', () => {
 });
 clearButton.addEventListener('click', () => clearGrid());
 
-generateGrid();
-
 let resizeGrid = n => {
   gameGrid.innerHTML = '';
   generateGrid(n);
@@ -120,5 +118,7 @@ slider.addEventListener('input', () => {
   gridWidth = parseInt(slider.value);
   resizeGrid(gridWidth);
 })
+
+generateGrid(gridWidth);
 
 
